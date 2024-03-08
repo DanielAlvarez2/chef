@@ -2,7 +2,7 @@
   "name": "chef",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/DanielAlvarez2/chef/issues"
   },
-  "homepage": "https://github.com/DanielAlvarez2/chef#readme"
+  "homepage": "https://github.com/DanielAlvarez2/chef#readme",
+  "dependencies": {
+    "express": "^4.18.3"
+  }
 }
