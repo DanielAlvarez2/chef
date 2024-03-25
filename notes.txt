@@ -4,3 +4,8 @@ Mongoose O.D.M.
 Auth
 Cloudinary
 MVC Architecture
+
+
+
+
+may need to install cors: npm install cors
