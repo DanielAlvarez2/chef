@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        h2,hr{color:grey;}
+        h2{
+            font-family: sans-serif;
+            text-transform:uppercase; 
+        }
+        footer{
+            text-align: center;
+            margin-top: auto;
+            padding-bottom: 10px;
+        }
+        #wrapper{
+            display:flex;
+            flex-direction: column;
+            min-height:100vh;
+        }
+        #top-img{
+            position:absolute;
+            right:0;
+            top:0;
+            max-height:200px;
+        }
+        #top-left{
+            max-width:50vw;
+        }
+        #top{
+            display: flex;
+            flex-direction: row;
+        }
+    </style>
+</head>
+<body>
+<div id="wrapper">
+    <main>
+       
+                <h1>Chef Manuel Romero</h1>
+                <h2>Recipe Database</h2>
+                <h3>olea restaurant, new haven, ct</h3>
+                <script>
+                    let imgNumber = Math.floor(Math.random()*70) + 1
+        
+                    document.write(`<img id="top-img" src="img/${imgNumber}.jpg">`);
+                </script>
+        
+        <hr>
+    </main>
+    <footer>
+        &copy2024 UploadSoftwareSolutions.com
+    </footer>
+</div><!--#wrapper-->
+</body>
+</html>

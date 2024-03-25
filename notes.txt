@@ -1,0 +1,6 @@
+CHEF APP 3/8/24
+
+Mongoose O.D.M.
+Auth
+Cloudinary
+MVC Architecture
