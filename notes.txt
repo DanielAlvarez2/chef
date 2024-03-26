@@ -9,3 +9,29 @@ MVC Architecture
 
 
 may need to install cors: npm install cors
+
+
+Set up new project DB in DB String in .env file:
+
+Original DB String:
+
+DB_URI=mongodb+srv://danielalvarez:stuff12345@cluster0.4bkm3yq.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+
+Modified DB String:
+
+DB_URI=mongodb+srv://danielalvarez:stuff12345@cluster0.4bkm3yq.mongodb.net/ChefApp?retryWrites=true&w=majority&appName=Cluster0
+            ^^^^^^^
+
+Added "ChefApp" b/w "/" and "?" to create NEW database for this new app
+
+Without THIS the new DB would be created under the name: "test"
+
+
+
+
+
+
+
+
+
+
