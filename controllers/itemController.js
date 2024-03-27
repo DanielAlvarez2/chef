@@ -4,7 +4,7 @@ const multer = require('multer')
 // multer config for image upload
 const storage = multer.diskStorage({
     destination: function(req, file, cb) {
-        cb(null, '../public/images')
+        cb(null, './public/images')
     },
     filename: function(req, file, cb){
         cb(null, Date.now() + '-' + file.originalname)
@@ -15,7 +15,6 @@ const upload = multer({storage: storage})
 
 const getAllItems = async (req,res)=>{
     try{
-        console.log('reached getAllItems')
         const items = await Item.find()
         res.render('home', {items:items})
     }catch(err){
@@ -29,7 +28,6 @@ const uploadPage = (req,res)=>{
 
 const createItem = async (req,res)=>{
     try{
-        console.log(req.file)
         const item = new Item({
             name: req.body.name,
             description: req.body.description,
