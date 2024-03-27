@@ -9,13 +9,14 @@ router
 router
     .route('/upload')
     .get(itemController.uploadPage)
+    .post(itemController.upload.single('image'), itemController.createItem)
 
-router
-    .route('/edit/:id')
-    .get(itemController.updateItem)
+// router
+//     .route('/edit/:id')
+//     .get(itemController.updateItem)
 
-router
-    .route('/delete/:id')
-    .post(itemController.deleteItem)
+// router
+//     .route('/delete/:id')
+//     .post(itemController.deleteItem)
 
 module.exports = router

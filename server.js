@@ -16,9 +16,6 @@ app.use('/', itemRoutes)
 
 const PORT = process.env.PORT || 4000
 
-app.get('/', (req,res)=>{
-    res.send(index.html)
-})
 
 mongoose.connection.once('open',()=>{
     console.log('Connected to MongoDB')

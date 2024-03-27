@@ -8,9 +8,7 @@
 <body>
 
     <div>
-        <div>
-            <img src="./images/<%= item.image %>">
-        </div>
+        
         <div>
             <ul>
                 <li>ChefApp</li>
@@ -19,25 +17,27 @@
             </ul>
         </div>
 
-        <div>
-            <% items.forEach(item=>{ %>
+        <% items.forEach(item=>{ %>
+            <div>
                 <div>
-                    <h5>Name: <%= item.name%></h5>
-                    <p>
-                        Description:<br><%= item.description%><br>
-                        Created:<%= item.created%><br>
-                        Last Updated:<%= item.updated%>
-                    </p>
+                    <img src="./images/<%= item.image %>">
                 </div>
+                    <div>
+                        <h5>Name: <%= item.name%></h5>
+                        <p>
+                            Description:<br><%= item.description%><br>
+                            
+                        </p>
+                    </div>
 
-                <div>
-                    <a href="/edit/<%= item._id %>">Edit</a>
-                    <form action="/delete/<%= item._id %>" method="POST">
-                        <button type="submit">Delete</button>
-                    </form>
-                </div>
-            <% }) %>
-        </div>
+                    <div>
+                        <a href="/edit/<%= item._id %>">Edit</a>
+                        <form action="/delete/<%= item._id %>" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+            </div>
+        <% }) %>
     </div>
 </body>
 </html>
