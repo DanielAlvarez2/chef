@@ -42,9 +42,31 @@ const createItem = async (req,res)=>{
     }
 }
 
+const editPage = async (req,res)=>{
+    try {
+        const item = await Item.findById(req.params.id)
+        res.render('edit', {item:item})
+    }catch(err){
+        console.log(err)
+    }
+}
+
+const updateItem = async (req,res)=>{
+    try {
+        await Item.findByIdAndUpdate(req.params.id,req.body)
+        res.redirect('/')
+    }catch(err){
+        console.log(err)
+    }
+}
+
+
+
 module.exports = {
     getAllItems,
     upload,
     uploadPage,
-    createItem
+    createItem,
+    editPage,
+    updateItem
 }

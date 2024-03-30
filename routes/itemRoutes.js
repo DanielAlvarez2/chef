@@ -11,9 +11,10 @@ router
     .get(itemController.uploadPage)
     .post(itemController.upload.single('image'), itemController.createItem)
 
-// router
-//     .route('/edit/:id')
-//     .get(itemController.updateItem)
+router
+    .route('/edit/:id')
+    .get(itemController.editPage)
+    .post(itemController.updateItem)
 
 // router
 //     .route('/delete/:id')
