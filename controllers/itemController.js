@@ -60,6 +60,14 @@ const updateItem = async (req,res)=>{
     }
 }
 
+const deleteItem = async (req,res)=>{
+    try {
+        await Item.findByIdAndDelete(req.params.id)
+        res.redirect('/')
+    }catch(err){
+        console.log(err)
+    }
+}
 
 
 module.exports = {
@@ -68,5 +76,6 @@ module.exports = {
     uploadPage,
     createItem,
     editPage,
-    updateItem
+    updateItem,
+    deleteItem
 }

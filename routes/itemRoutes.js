@@ -16,8 +16,8 @@ router
     .get(itemController.editPage)
     .post(itemController.updateItem)
 
-// router
-//     .route('/delete/:id')
-//     .post(itemController.deleteItem)
+router
+    .route('/delete/:id')
+    .post(itemController.deleteItem)
 
 module.exports = router
