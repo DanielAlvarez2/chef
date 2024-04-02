@@ -1,1 +1,39 @@
-<%= item._id %>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Item</title>
+</head>
+<body>
+    <div>
+        <div>
+            <ul>
+                <li>ChefApp</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="/upload">Upload</a></li>
+            </ul>
+        </div>
+
+        <div>
+            <h2>Edit Item</h2>
+            <form action='/edit/<%= item._id %>' method='POST'>
+                <div>
+                    <label for='name'>Name</label>
+                    <input type='text' id='name' name='name' value="<%= item.name %>" required>
+                </div>
+
+                <div>
+                    <label for='description'>Description</label>
+                    <input type='text' id='description' name='description' value='<%= item.description %>' required>
+                </div>
+
+
+                <button type='submit'>Submit</button>
+
+            </form>
+        </div>
+    </div>
+    
+</body>
+</html>
