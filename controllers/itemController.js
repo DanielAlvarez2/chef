@@ -16,7 +16,7 @@ const upload = multer({storage: storage})
 const getAllItems = async (req,res)=>{
     try{
         const items = await Item.find()
-        res.render('home', {items:items})
+        res.render('index', {items:items})
     }catch(err){
         console.log(err)
     }

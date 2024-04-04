@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chef App</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+
+</head>
+<body>
+
+
+    <div>
+        
+        <%- include('partials/navbar.ejs') %>
+
+        <a href="/login">Login</a>
+        <a href="/signup">Sign Up</a>
+
+        <br><br>
+
+
+        <% items.forEach(item=>{ %>
+            <div>
+                <div>
+                    <img src="./images/<%= item.image %>">
+                </div>
+                    <div>
+                        <h5>Name: <%= item.name %></h5>
+                        <p>
+                            Description:<br><%= item.description %><br>
+                            
+                        </p>
+                    </div>
+
+                    <div>
+                        <a href="/edit/<%= item._id %>">Edit</a>
+                        <form action="/delete/<%= item._id %>" method="POST">
+                            <button type="submit">Delete</button>
+                        </form>
+                    </div>
+            </div>
+        <% }) %>
+    </div>
+</body>
+</html>
