@@ -77,6 +77,14 @@ const loginPage = async (req,res)=>{
     }
 }
 
+const signupPage = async (req,res)=>{
+    try{
+        res.render('signup')
+    }catch(err){
+        console.log(err)
+    }
+}
+
 
 module.exports = {
     getAllItems,
@@ -86,5 +94,6 @@ module.exports = {
     editPage,
     updateItem,
     deleteItem,
-    loginPage
+    loginPage,
+    signupPage
 }
