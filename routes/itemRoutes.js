@@ -30,5 +30,6 @@ router
 
 router
     .route('/dashboard')
+    .get(itemController.dashboardPage)
 
 module.exports = router

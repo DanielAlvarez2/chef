@@ -85,6 +85,15 @@ const signupPage = async (req,res)=>{
     }
 }
 
+const dashboardPage = async (req,res)=>{
+    try{
+        const items = await Item.find()
+        res.render('dashboard',{items:items})
+    }catch(err){
+        console.log(err)
+    }
+}
+
 
 module.exports = {
     getAllItems,
@@ -95,5 +104,6 @@ module.exports = {
     updateItem,
     deleteItem,
     loginPage,
-    signupPage
+    signupPage,
+    dashboardPage
 }
