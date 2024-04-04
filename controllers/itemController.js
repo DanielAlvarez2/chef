@@ -69,6 +69,14 @@ const deleteItem = async (req,res)=>{
     }
 }
 
+const loginPage = async (req,res)=>{
+    try{
+        res.render('login')
+    }catch(err){
+        console.log(err)
+    }
+}
+
 
 module.exports = {
     getAllItems,
@@ -77,5 +85,6 @@ module.exports = {
     createItem,
     editPage,
     updateItem,
-    deleteItem
+    deleteItem,
+    loginPage
 }

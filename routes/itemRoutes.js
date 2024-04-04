@@ -20,4 +20,8 @@ router
     .route('/delete/:id')
     .post(itemController.deleteItem)
 
+router
+    .route('/login')
+    .get(itemController.loginPage)
+
 module.exports = router
