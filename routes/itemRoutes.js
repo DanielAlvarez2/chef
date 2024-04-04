@@ -28,4 +28,7 @@ router
     .route('/signup')
     .get(itemController.signupPage)
 
+router
+    .route('/dashboard')
+
 module.exports = router
