@@ -1,3 +1,7 @@
 nav{
     background:grey;
 }
+
+nav ul{
+    display:flex;
+}
