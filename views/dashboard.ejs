@@ -13,8 +13,10 @@
         
         <%- include('partials/navbar.ejs') %>
 
+
+        <ul>
         <% items.forEach(item=>{ %>
-            <div>
+            <li data-id="<%= item._id %>" >
                 <div>
                     <img src="./images/<%= item.image %>">
                 </div>
@@ -32,8 +34,10 @@
                             <button type="submit">Delete</button>
                         </form>
                     </div>
-            </div>
+            </li>
         <% }) %>
+
+        </ul>
     </div>
 </body>
 </html>
