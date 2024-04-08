@@ -8,5 +8,5 @@ nav ul{
 
 ul{
     list-style-type: none;
-
+    justify-content: space-around;
 }
