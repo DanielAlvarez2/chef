@@ -1,5 +1,6 @@
 nav{
     background:grey;
+    padding:5px;
 }
 
 nav ul{
@@ -9,4 +10,9 @@ nav ul{
 ul{
     list-style-type: none;
     justify-content: space-around;
+}
+
+a{
+    text-decoration: none;
+
 }
