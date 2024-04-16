@@ -1,9 +1,10 @@
 nav{
     background:grey;
-    padding:5px;
+    border-radius: 5px;
 }
 
 nav ul{
+    padding:5px;
     display:flex;
 }
 
