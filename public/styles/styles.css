@@ -22,3 +22,10 @@ footer{
     width:100%;
     text-align: center;
 }
+img{
+    max-width:50ch;
+    border-radius: 20px;
+}
+p{
+    max-width:50ch;
+}
