@@ -29,3 +29,7 @@ img{
 p{
     max-width:50ch;
 }
+
+.item-card{
+    margin-bottom: 100px;
+}
