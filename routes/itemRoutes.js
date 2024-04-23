@@ -25,8 +25,8 @@ router
     .get(itemController.loginPage)
 
 router
-    .route('/signup')
-    .get(itemController.signupPage)
+    .route('/register')
+    .get(itemController.registerPage)
 
 router
     .route('/dashboard')
