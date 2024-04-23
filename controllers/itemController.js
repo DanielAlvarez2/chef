@@ -77,9 +77,9 @@ const loginPage = async (req,res)=>{
     }
 }
 
-const signupPage = async (req,res)=>{
+const registerPage = async (req,res)=>{
     try{
-        res.render('signup')
+        res.render('register')
     }catch(err){
         console.log(err)
     }
@@ -104,6 +104,6 @@ module.exports = {
     updateItem,
     deleteItem,
     loginPage,
-    signupPage,
+    registerPage,
     dashboardPage
 }
