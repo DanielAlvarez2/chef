@@ -1,3 +1,9 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 nav{
     background:grey;
     border-radius: 5px;
@@ -32,4 +38,10 @@ p{
 
 .item-card{
     margin-bottom: 120px;
+}
+.card-button{
+    width:50px;
+    height:30px;
+    border:1px solid red;
+    display: inline-block;
 }

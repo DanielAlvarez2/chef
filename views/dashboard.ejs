@@ -28,12 +28,12 @@
                         </p>
                     </div>
 
-                    <div>
+                    <span class="card-button">
                         <a href="/edit/<%= item._id %>">Edit</a>
-                        <form action="/delete/<%= item._id %>" method="POST">
-                            <button type="submit">Delete</button>
+                        <form style="display:inline-block;" action="/delete/<%= item._id %>" method="POST">
+                            <button class="card-button" type="submit">Delete</button>
                         </form>
-                    </div>
+                    </span>
             </li>
         <% }) %>
 
