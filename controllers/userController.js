@@ -8,3 +8,9 @@ const loginPage = (req,res) =>{
 const registerPage = (req,res) =>{
     res.render('register.ejs')
 }
+
+const loginUser = passport.authenticate('local', {
+    successRedirect: '/dashboard',
+    failureRedirect: '/login',
+    failureFlash: false
+})
