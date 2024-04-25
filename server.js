@@ -25,6 +25,8 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
+passport.use(new LocalStrategy(User.authenticate()))
+
 const PORT = process.env.PORT || 4000
 
 
