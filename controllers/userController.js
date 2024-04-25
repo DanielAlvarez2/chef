@@ -35,3 +35,11 @@ const logoutUser = (req,res)=>{
         res.redirect('/')
     })
 }
+
+module.exports = {
+    loginPage,
+    loginUser,
+    registerPage,
+    registerUser,
+    logoutUser
+}
