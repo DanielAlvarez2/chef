@@ -23,6 +23,7 @@ app.use(session({
 }))
 
 app.use(passport.initialize())
+app.use(passport.session())
 
 const PORT = process.env.PORT || 4000
 
