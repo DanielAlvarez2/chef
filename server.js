@@ -24,9 +24,14 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
-passport.serializeUser()
-passport.deserializeUser()
+passport.serializeUser(User.serializeUser)
+passport.deserializeUser(User.deserializeUser)
 
+//passing current user info to all routes
+app.use((req,res,next) => {
+    res.locals.currentUser = req.user
+    next()
+})
 
 passport.use(new LocalStrategy(User.authenticate()))
 
