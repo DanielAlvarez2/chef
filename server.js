@@ -24,6 +24,8 @@ app.use(session({
 
 app.use(passport.initialize())
 app.use(passport.session())
+passport.serializeUser()
+
 
 passport.use(new LocalStrategy(User.authenticate()))
 
