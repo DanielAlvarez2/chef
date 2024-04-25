@@ -7,6 +7,7 @@ const connectDB = require('./config/connectDB')
 const itemRoutes = require('./routes/itemRoutes.js') 
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
+const User = require('./models/userModel.js')
 
 connectDB()
 
