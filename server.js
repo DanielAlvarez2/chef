@@ -16,6 +16,11 @@ app.use(express.urlencoded({extended:true})) //access form data (body.xxx)
 app.use(express.static('public')) //serve static files from public folder
 app.set('view engine','ejs')
 app.use('/', itemRoutes)
+app.use(session({
+    secret: process.env.SESSION_SECRET,
+    resave: false,
+    saveUninitialized: false
+}))
 
 const PORT = process.env.PORT || 4000
 
