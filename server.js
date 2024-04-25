@@ -22,6 +22,8 @@ app.use(session({
     saveUninitialized: false
 }))
 
+app.use(passport.initialize())
+
 const PORT = process.env.PORT || 4000
 
 
