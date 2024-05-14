@@ -35,7 +35,7 @@ const createItem = async (req,res)=>{
     })
 
     await item.save()
-    res.redirect('/')
+    res.redirect('/dashboard')
 
     }catch(err){
         console.log(err)
