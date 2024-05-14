@@ -6,6 +6,7 @@ const mongoose = require('mongoose')
 const session = require('express-session')
 const connectDB = require('./config/connectDB')
 const itemRoutes = require('./routes/itemRoutes.js') 
+const userRoutes = require('./routes/userRoutes.js')
 const passport = require('passport')
 const LocalStrategy = require('passport-local').Strategy
 const User = require('./models/userModel.js')
@@ -17,6 +18,7 @@ app.use(express.urlencoded({extended:true})) //access form data (body.xxx)
 app.use(express.static('public')) //serve static files from public folder
 app.set('view engine','ejs')
 app.use('/', itemRoutes)
+
 app.use(session({
     secret: process.env.SESSION_SECRET,
     resave: false,
