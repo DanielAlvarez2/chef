@@ -104,6 +104,6 @@ module.exports = {
     updateItem,
     deleteItem,
     loginPage,
-    Page,
+    registerPage,
     dashboardPage
 }
