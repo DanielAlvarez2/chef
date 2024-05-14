@@ -17,3 +17,4 @@ router
     .get(userController.logoutUser)
 
 
+module.exports = router
