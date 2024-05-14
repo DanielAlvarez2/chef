@@ -11,3 +11,9 @@ router
     .route('/register')
     .get(userController.registerPage)
     .post(userController.registerUser)
+
+router
+    .route('/logout')
+    .get(userController.logoutUser)
+
+
