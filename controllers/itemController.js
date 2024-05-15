@@ -15,7 +15,7 @@ const upload = multer({storage: storage})
 
 const getAllItems = async (req,res)=>{
     try{
-        const items = await Item.find()
+        const items = await Item.find().populate('owner')
         res.render('index', {items:items})
     }catch(err){
         console.log(err)
@@ -31,7 +31,8 @@ const createItem = async (req,res)=>{
         const item = new Item({
             name: req.body.name,
             description: req.body.description,
-            image: req.file.filename
+            image: req.file.filename,
+            owner: req.user._id
     })
 
     await item.save()
@@ -53,7 +54,10 @@ const editPage = async (req,res)=>{
 
 const updateItem = async (req,res)=>{
     try {
-        await Item.findByIdAndUpdate(req.params.id,req.body)
+        let item = await Item.findById(req.params.id)
+        if(item.owner.equals(req.user._id)){
+            await Item.findByIdAndUpdate(req.params.id,req.body)
+        }
         res.redirect('/')
     }catch(err){
         console.log(err)
@@ -62,7 +66,10 @@ const updateItem = async (req,res)=>{
 
 const deleteItem = async (req,res)=>{
     try {
-        await Item.findByIdAndDelete(req.params.id)
+        let item = await Item.findById(req.params.id)
+        if(item.owner.equals(req.user._id)){
+            await Item.findByIdAndDelete(req.params.id)
+        }
         res.redirect('/')
     }catch(err){
         console.log(err)

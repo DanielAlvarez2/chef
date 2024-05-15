@@ -20,13 +20,6 @@ router
     .route('/delete/:id')
     .post(itemController.deleteItem)
 
-router
-    .route('/login')
-    .get(itemController.loginPage)
-
-router
-    .route('/register')
-    .get(itemController.registerPage)
 
 router
     .route('/dashboard')
